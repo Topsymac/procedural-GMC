@@ -11,18 +11,20 @@ Write an algorithm which determines, for n pairs of given vectors, whether two v
 function dotProduct(vector1, vector2) {
     let result = 0;
     for (let i = 0; i < vector1.length; i++) {
-        result += vector1[i] * vector2[i]
+        result = result + (vector1[i] * vector2[i])
     }
-    return result
+    return result;
 }
 
-for (let i = 0; i < vector.length; i++) {
-    for (let j = i + 1; j < vector.length; j++) {
-        if (dotProduct(vector[i], vector[j]) === 0) {
-            console.log(`${vector[i]} and ${vector[j]} are orthogonal `)
-        }
+function orthogonal_check(vec1, vec2) {
+    if (dot_product(vec1, vec2) === 0) {
+        return ("Vectors [" + vec1 + "] and [" + vec2 + "] are orthogonal");
+    } else {
+        return ("Vectors [" + vec1 + "] and [" + vec2 + "] are not orthogonal")
     }
+
 }
+
 
 
 
